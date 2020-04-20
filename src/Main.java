@@ -3,8 +3,6 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
-        new QueMePongo().cargarPrenda(CategoriaDePrenda.CALZADO,
-                null, MaterialDePrenda.CUERO,
-                Color.BLACK, null);
+        Prenda prenda = new Prenda(TipoDePrenda.ZAPATO, MaterialDePrenda.CUERO, null);
     }
 }
