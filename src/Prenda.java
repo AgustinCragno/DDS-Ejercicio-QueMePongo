@@ -10,9 +10,9 @@ public class Prenda {
     private Color colorSecundario;
 
     public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario) {
-        this.tipo = requireNonNull(tipo, "Tipo de prenda es un valor obligatorio");
-        this.material = requireNonNull(material, "Material de prenda es un valor obligatorio");
-        this.colorPrimario = requireNonNull(colorPrimario, "Color de prenda es un valor obligatorio");
+        this.tipo = tipo;
+        this.material = material;
+        this.colorPrimario = colorPrimario;
     }
 
     public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario, Color colorSecundario) {
@@ -21,10 +21,7 @@ public class Prenda {
     }
 
     public TipoDePrenda getTipo() { return tipo; }
-
     public MaterialDePrenda getMaterial() { return material; }
-
     public Color getColorPrimario() { return colorPrimario; }
-
     public Color getColorSecundario() { return colorSecundario; }
 }
