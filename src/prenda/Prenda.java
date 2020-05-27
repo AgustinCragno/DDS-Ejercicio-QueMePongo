@@ -27,6 +27,7 @@ public class Prenda {
     }
 
     public TipoDePrenda getTipo() { return tipo; }
+    public CategoriaDePrenda getCategoria(){ return tipo.categoriaDelTipo; }
     public MaterialDePrenda getMaterial() { return material; }
     public Color getColorPrimario() { return colorPrimario; }
     public Color getColorSecundario() { return colorSecundario; }
