@@ -15,17 +15,18 @@ public class BorradorPrenda {
     private Trama trama = Trama.LISA;
     private Color colorPrimario;
     private Color colorSecundario;
+    private int temperaturaApta;
 
     public BorradorPrenda(TipoDePrenda tipoDePrenda){
         this.tipoDePrenda = requireNonNull(tipoDePrenda, "Tipo de prenda es un valor obligatorio");
     }
 
     public void especificarTipoDeMaterial(TipoDeMaterial tipoDeMaterial){
-        this.tipoDeMaterial = requireNonNull(tipoDeMaterial, "prenda.material.TipoDeMaterial de prenda es un valor obligatorio");
+        this.tipoDeMaterial = requireNonNull(tipoDeMaterial, "TipoDeMaterial de prenda es un valor obligatorio");
     }
 
     public void especificarTrama(Trama trama){
-        this.trama = requireNonNull(trama, "prenda.material.Trama de la prenda no puede ser nula");
+        this.trama = requireNonNull(trama, "Trama de la prenda no puede ser nula");
     }
 
     public void especificarColorPrimario(Color colorPrimario) {
@@ -36,7 +37,11 @@ public class BorradorPrenda {
         this.colorSecundario = colorSecundario;
     }
 
+    public void especificarTemperaturaApta(int temperatura){
+        this.temperaturaApta = temperatura;
+    }
+
     public Prenda crearPrenda(){
-        return new Prenda(tipoDePrenda, new MaterialDePrenda(trama, tipoDeMaterial), colorPrimario, colorSecundario);
+        return new Prenda(tipoDePrenda, new MaterialDePrenda(trama, tipoDeMaterial), colorPrimario, colorSecundario, temperaturaApta);
     }
 }

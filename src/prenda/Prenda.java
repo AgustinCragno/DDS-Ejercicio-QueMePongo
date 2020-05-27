@@ -12,15 +12,17 @@ public class Prenda {
     private MaterialDePrenda material;
     private Color colorPrimario;
     private Color colorSecundario;
+    private int temperaturaParaUso;
 
-    public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario) {
+    public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario, int temperaturaParaUso) {
         this.tipo = tipo;
         this.material = material;
         this.colorPrimario = colorPrimario;
+        this.temperaturaParaUso = temperaturaParaUso;
     }
 
-    public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario, Color colorSecundario) {
-        this(tipo, material, colorPrimario);
+    public Prenda(TipoDePrenda tipo, MaterialDePrenda material, Color colorPrimario, Color colorSecundario, int temperaturaParaUso) {
+        this(tipo, material, colorPrimario, temperaturaParaUso);
         this.colorSecundario = colorSecundario;
     }
 
@@ -28,4 +30,5 @@ public class Prenda {
     public MaterialDePrenda getMaterial() { return material; }
     public Color getColorPrimario() { return colorPrimario; }
     public Color getColorSecundario() { return colorSecundario; }
+    public int getTemperaturaParaUso() { return temperaturaParaUso; }
 }
