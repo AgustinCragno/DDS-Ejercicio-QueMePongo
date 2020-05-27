@@ -1,3 +1,5 @@
+package prenda;
+
 public enum TipoDePrenda {
     REMERA(CategoriaDePrenda.PARTE_SUPERIOR), CAMISA(CategoriaDePrenda.PARTE_SUPERIOR),
     ZAPATO(CategoriaDePrenda.CALZADO), PANTALON(CategoriaDePrenda.PARTE_INFERIOR),

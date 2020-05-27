@@ -1,3 +1,9 @@
+package uniforme;
+
+import prenda.*;
+import prenda.material.TipoDeMaterial;
+import prenda.material.Trama;
+
 import java.awt.*;
 
 public class SastreUTN extends Sastre {

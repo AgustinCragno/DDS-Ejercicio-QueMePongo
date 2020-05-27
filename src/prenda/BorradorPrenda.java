@@ -1,3 +1,9 @@
+package prenda;
+
+import prenda.material.MaterialDePrenda;
+import prenda.material.TipoDeMaterial;
+import prenda.material.Trama;
+
 import java.awt.*;
 
 import static java.util.Objects.requireNonNull;
@@ -15,11 +21,11 @@ public class BorradorPrenda {
     }
 
     public void especificarTipoDeMaterial(TipoDeMaterial tipoDeMaterial){
-        this.tipoDeMaterial = requireNonNull(tipoDeMaterial, "TipoDeMaterial de prenda es un valor obligatorio");
+        this.tipoDeMaterial = requireNonNull(tipoDeMaterial, "prenda.material.TipoDeMaterial de prenda es un valor obligatorio");
     }
 
     public void especificarTrama(Trama trama){
-        this.trama = requireNonNull(trama, "Trama de la prenda no puede ser nula");
+        this.trama = requireNonNull(trama, "prenda.material.Trama de la prenda no puede ser nula");
     }
 
     public void especificarColorPrimario(Color colorPrimario) {

@@ -1,3 +1,7 @@
+package uniforme;
+
+import prenda.Prenda;
+
 public abstract class Sastre {
 
     public Uniforme fabricarUniforme(){

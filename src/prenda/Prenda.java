@@ -1,3 +1,7 @@
+package prenda;
+
+import prenda.material.MaterialDePrenda;
+
 import java.awt.*;
 
 import static java.util.Objects.requireNonNull;

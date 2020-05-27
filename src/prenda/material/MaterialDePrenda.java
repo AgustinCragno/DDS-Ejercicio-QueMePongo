@@ -1,3 +1,5 @@
+package prenda.material;
+
 public class MaterialDePrenda {
 
     private Trama trama;

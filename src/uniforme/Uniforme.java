@@ -1,3 +1,7 @@
+package uniforme;
+
+import prenda.Prenda;
+
 public class Uniforme {
 
     private Prenda prendaSuperior;
