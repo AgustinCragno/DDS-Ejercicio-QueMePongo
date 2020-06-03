@@ -32,12 +32,21 @@ public class Usuario {
     public void agregarAtuendo(Atuendo atuendo){
         atuendos.add(atuendo);
     }
+
+    public void agregarGuardarropas(Guardarropas guardarropas){
+        misGuardarropas.add(guardarropas);
+    }
+
+    public void crearGuardarropasCompartido(Usuario usuarioACompartir, String tagGuardarropas){
+        Guardarropas guardarropasCompartido = new Guardarropas(tagGuardarropas);
+
+        this.agregarGuardarropas(guardarropasCompartido);
+        usuarioACompartir.agregarGuardarropas(guardarropasCompartido);
+    }
 }
 
 /*
 Req, 5ta iteracion
--Usuario maneja varios guardarropas para distintos criterios
--Usuario comparte guardarropas con otros usuarios
 -Otro usuario me proponga tentativamente poder agregar una prenda al guardarropas
 -Otro usuario me proponga tentativamente poder quitar una prenda del guardarropas
 -Debo poder ver todas las propuestas recibidas, para poder aceptarlas o rechazarlas
