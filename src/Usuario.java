@@ -24,9 +24,14 @@ public class Usuario {
     private List<Atuendo> atuendos;
     private List<Guardarropas> misGuardarropas;
 
+    private List<SolicitudPrenda> solicitudes;
+    private List<SolicitudPrenda> solicitudesAceptadas;
+
     public Usuario() {
         atuendos = new ArrayList<>();
         misGuardarropas = new ArrayList<>();
+        solicitudes = new ArrayList<>();
+        solicitudesAceptadas = new ArrayList<>();
     }
 
     public void agregarAtuendo(Atuendo atuendo){
@@ -43,12 +48,27 @@ public class Usuario {
         this.agregarGuardarropas(guardarropasCompartido);
         usuarioACompartir.agregarGuardarropas(guardarropasCompartido);
     }
-}
 
-/*
-Req, 5ta iteracion
--Otro usuario me proponga tentativamente poder agregar una prenda al guardarropas
--Otro usuario me proponga tentativamente poder quitar una prenda del guardarropas
--Debo poder ver todas las propuestas recibidas, para poder aceptarlas o rechazarlas
--Quiero poder deshacer las propuestas que haya aceptado
- */
+    public void recibirSolicitudPrenda(SolicitudPrenda solicitud){
+        solicitudes.add(solicitud);
+    }
+
+    public void enviarSolicitudPrenda(Usuario otroUsuario, SolicitudPrenda solicitud){
+        otroUsuario.recibirSolicitudPrenda(solicitud);
+    }
+
+    public void aceptarSolicitud(SolicitudPrenda solicitudPrenda){
+        solicitudPrenda.aceptarSolicitud();
+        solicitudesAceptadas.add(solicitudPrenda);
+        solicitudes.remove(solicitudPrenda);
+    }
+
+    public void rechazarSolicitud(SolicitudPrenda solicitudPrenda){
+        solicitudes.remove(solicitudPrenda);
+    }
+
+    public void deshacerSolicitudAceptada(SolicitudPrenda solicitudPrenda){
+        solicitudPrenda.deshacer();
+        solicitudesAceptadas.remove(solicitudPrenda);
+    }
+}
