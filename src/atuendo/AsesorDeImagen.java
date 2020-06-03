@@ -2,23 +2,18 @@ package atuendo;
 
 import clima.ProvedorClima;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Ropero {
+public class AsesorDeImagen {
 
-    private List<Atuendo> atuendos;
+    private ProvedorClima provedorClima;
 
-    public Ropero() {
-        atuendos = new ArrayList<>();
+    public AsesorDeImagen(ProvedorClima provedorClima) {
+        this.provedorClima = provedorClima;
     }
 
-    public void agregarAtuendo(Atuendo atuendo){
-        atuendos.add(atuendo);
-    }
-
-    public Atuendo obtenerSugerencia(ProvedorClima provedorClima){
+    public Atuendo obtenerSugerencia(List<Atuendo> atuendos){
         int temperatura = provedorClima.getTemperaturaBsAs();
 
         List<Atuendo> atuendosAptos = atuendos.stream()
